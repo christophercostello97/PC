@@ -16,7 +16,7 @@ NGramTokenizer <- function(x, n = 2) {
 CustomTokenizer <- function(x) c(NGramTokenizer(x, 1), NGramTokenizer(x, 2), NGramTokenizer(x, 3), NGramTokenizer(x, 4))
 
 
-data.path <- file.path(getwd(), "..", "Data", "Processed", "twitter_data_processed.csv")  # get path to file containing labeled Tweets
+data.path <- file.path(getwd(), "twitter_data_processed.csv")  # get path to file containing labeled Tweets
 data <- read.csv(data.path, header = TRUE)  # read labeled Tweets into dataframe
 
 library(tm)  # use Text Mining Package for manipulating raw text
